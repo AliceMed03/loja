@@ -1,0 +1,30 @@
+body{
+	background-color: #DDA0DD; 
+	font-family: Arial; 
+	font-size: 20px;
+}
+
+h1{
+	color: #C71585; 
+	font-family: Algerian; 
+	background-color: #DA70D6;
+	text-align: center;
+}
+
+h2{
+	color: #C71585; 
+	font-family: Algerian; 
+	font-size: 28px;
+}
+
+p{
+	color: #C71585
+}
+
+button {
+	background-color: #C71585;
+	color: white;
+	cursor: pointer; 
+	font-size: 20px;
+	padding: 20px 40px;
+}

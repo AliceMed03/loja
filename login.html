@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<!--Possuir um campo para informar o e-mail e outro para informar a senha.
+	Possuir dois botões, sendo um para efetuar a autenticação e direcionar para a tela de “Lista de Produtos” (caso e-mail e senha forem válidos) e outro botão para limpar os dados da tela. 
+	No botão de autenticação (login) deverá ser implementada uma validação de e-mail e senha utilizando a linguagem JavaScript. -->
+
+<html>
+<head>
+	<title>Login</title>
+
+	<link rel="stylesheet" type="text/css" href="css/design.css">
+
+</head>
+<body>
+
+	<h1>Login</h1>
+
+	<form>
+		
+		<p>
+			<label for="l_email">E-mail:</label>
+			<input type="email" name="email" id="email"
+			placeholder="Digite seu e-mail, exemplo: email@provedor.com">
+		</p>
+
+		<p>
+			<label for="l_senha">Senha:</label>
+			<input type="password" name="senha" id="senha" placeholder="**********">
+		</p>
+
+		<p>
+			<button type="submit" name="enviar_dados" id="enviar_dados">Validar</button>
+			<button type="reset" name="limpar" id="limpar">Limpar Tela</button>
+		</p>
+
+	</form>
+
+</body>
+
+</html>
