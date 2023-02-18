@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<!--Possuir um título (tópico) para identificação da tela.
+	Possuir um formulário para cadastro do produto. Deverá conter os seguintes campos:
+		○ Código (number)
+		Nome (text)
+		Preço de Venda (text).
+		Categoria (select)
+		Ativo (radios)
+		Tamanhos Disponíveis (checkbox)
+  -	Possuir dois botões, sendo um para gravar e outro para voltar. Em ambos os botões deverão direcionar para a tela de “Lista de Produtos”.
+
+ -->
+
+<html>
+<head>
+	<title>Cadastro</title>
+
+	<link rel="stylesheet" type="text/css" href="css/design.css">
+
+</head>
+<body>
+
+	<h1>Cadastro de Produtos</h1>
+
+	<form>
+		
+		<p>
+			<label for="l_codigo">Código:</label>
+			<input type="number" name="codigo" id="codigo" min="4" 
+			 placeholder="Digite apenas números">
+		</p>
+
+		<p>
+			<label for="l_nome">Nome:</label>
+			<input type="text" name="nome" id="nome"
+			 placeholder="Digite um item de vestuário">
+		</p>
+
+		<p>
+			<label for="l_preco">Preço de Venda:</label>
+			<input type="text" name="preco_de_venda" id="preco de venda" 
+			 placeholder="Digite o valor em R$">
+		</p>
+
+		<p>
+			<label for="l_categoria">Categoria:</label>
+			<select name="categoria" id="categoria">
+				<option value="Vestidos">Vestidos</option>
+				<option value="Calças">Calças</option>
+				<option value="Camisas_Camisetas">Camisas/Camisetas</option>
+				<option value="Bermudas">Bermudas</option>
+				<option value="Sapatos">Sapatos</option>
+			</select>
+		</p>
+
+		<p>
+			<label for="l_ativo">Ativo:</label>
+
+			<input type="radio" name="Ativo" id="Ativo" value="S" required>
+				<label for="l_sim">Sim</label>
+
+			<input type="radio" name="Ativo" id="Ativo" value="N">
+				<label for="l_nao">Não</label>
+		</p>
+
+		<p>
+			<label for="l_tamanhos">Tamanhos Disponíveis:</label>
+		<p>
+			<input type="checkbox" name="PP" id="PP" value="PP">
+			 	<label for="l_PP">PP</label>
+		</p>
+		<p>
+			<input type="checkbox" name="P" id="P" value="P">
+			 	<label for="l_P">P</label>
+			
+		<p>
+			<input type="checkbox" name="M" id="M" value="M">
+			 	<label for="l_M">M</label>
+		</p>
+		<p>
+			<input type="checkbox" name="G" id="G" value="G">
+			 	<label for="l_G">G</label>
+		</p>
+		<p>
+			<button type="reset" name="gravar" id="gravar" 
+			onclick="window.location='lista_de_produtos.html'">Gravar</button>
+			<button type="reset" name="voltar" id="voltar"
+			onclick="window.location='lista_de_produtos.html'">Voltar</button>
+		</p>
+	</form>
+
+</body>
+</html>
