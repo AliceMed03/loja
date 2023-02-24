@@ -1,41 +1,37 @@
 <!DOCTYPE html>
-
-<!--Possuir um campo para informar o e-mail e outro para informar a senha.
-	Possuir dois botões, sendo um para efetuar a autenticação e direcionar para a tela de “Lista de Produtos” (caso e-mail e senha forem 
-	válidos) e outro botão para limpar os dados da tela. 
-	No botão de autenticação (login) deverá ser implementada uma validação de e-mail e senha utilizando a linguagem JavaScript. -->
-
-<html>
+<html lang="pt-br">
 <head>
-	<title>Login</title>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
 	<link rel="stylesheet" type="text/css" href="design.css">
+
+    <script src="validacao.js"></script>
 
 </head>
 <body>
+ <main class="container">
+       
 
-	<h1>Login</h1>
+           <b> <h2>Acesse a Lista de Produtos</h2> </b>
+    <form name="login" method="post" action="lista_de_produtos.html" onsubmit="return validaEmail()">
+        <div class="input-field">
+                <input type="text" name="username" id="username" placeholder="Email">
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <input type="password" name="senha" id="senha" placeholder="Senha">
+                <div class="underline"></div>
+            </div>
+           
+            <input type="submit" id="entrar" name="entrar" value="Entrar">
+            <input type="reset" value="Limpar Dados">
 
-	<form>
-		
-		<p>
-			<label for="l_email">E-mail:</label>
-			<input type="email" name="email" id="email"
-			placeholder="Digite seu e-mail, exemplo: email@provedor.com">
-		</p>
-
-		<p>
-			<label for="l_senha">Senha:</label>
-			<input type="password" name="senha" id="senha" placeholder="**********">
-		</p>
-
-		<p>
-			<button type="submit" name="enviar_dados" id="enviar_dados">Validar</button>
-			<button type="reset" name="limpar" id="limpar">Limpar Tela</button>
-		</p>
-
-	</form>
-
+        </div>
+    </form>
+    </div>
+ </main>
 </body>
-
 </html>
+

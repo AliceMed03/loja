@@ -24,7 +24,8 @@ p{
 
 button {
 	background-color: #C71585;
-	color: white;
+	color: black;
 	cursor: pointer; 
-	font-size: 15px;
+	font-size: 20px;
+	font-family: Arial;
 }
