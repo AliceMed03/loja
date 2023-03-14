@@ -16,7 +16,8 @@
 <head>
 	<title>Cadastro</title>
 
-	<link rel="stylesheet" type="text/css" href="design.css">
+	<link rel="stylesheet" type="text/css" href="css/design.css">
+    <script src="js/validacao.js"></script>
 
 </head>
 <body>
@@ -39,7 +40,7 @@
 
 		<p>
 			<label for="l_preco">Preço de Venda:</label>
-			<input type="text" name="preco_de_venda" id="preco de venda" 
+			<input type="text" name="preco_de_venda" id="preco_de_venda" 
 			 placeholder="Digite o valor em R$">
 		</p>
 
@@ -83,12 +84,10 @@
 			 	<label for="l_G">G</label>
 		</p>
 		<p>
-			<button type="reset" name="gravar" id="gravar" 
-			onclick="window.location='lista_de_produtos.html'">Gravar</button>
-			<button type="reset" name="voltar" id="voltar"
-			onclick="window.location='lista_de_produtos.html'">Voltar</button>
+			<button name="gravar" id="gravar" onclick="cadastrar()">Gravar</button>
+			<button name="voltar" id="voltar" onclick="window.location='lista_de_produtos.html'">Voltar</button>
 		</p>
 	</form>
-
+<!--ajustado-->
 </body>
 </html>

@@ -5,9 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
-	<link rel="stylesheet" type="text/css" href="design.css">
+	<link rel="stylesheet" type="text/css" href="css/design.css">
 
-    <script src="validacao.js"></script>
+    <script src="js/validacao.js"></script>
+
+    <style type="text/css">
+		button {
+            background-color: #C71585;
+            color: black;
+            cursor: pointer; 
+            font-size: 14px;  
+            font-family: Arial;
+        }
+	</style>
 
 </head>
 <body>
@@ -24,9 +34,10 @@
                 <input type="password" name="senha" id="senha" placeholder="Senha">
                 <div class="underline"></div>
             </div>
-           
-            <input type="submit" id="entrar" name="entrar" value="Entrar">
-            <input type="reset" value="Limpar Dados">
+
+            <button type="submit" id="entrar" name="entrar">Entrar</button>
+            <button type="reset">Limpar Dados</button>
+
 
         </div>
     </form>

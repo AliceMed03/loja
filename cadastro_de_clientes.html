@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Cadastro</title>
+
+	<link rel="stylesheet" type="text/css" href="css/design.css">
+    <script src="js/validacao.js"></script>
+
+</head>
+<body>
+
+	<h1>Cadastro de Clientes</h1>
+
+	<form>
+		
+		<p>
+			<label for="l_codigo">Código:</label>
+			<input type="number" name="codigo" id="codigo" min="4">
+		</p>
+
+		<p>
+			<label for="l_nome">Nome:</label>
+			<input type="text" name="nome" id="nome">
+		</p>
+
+		<p>
+			<label for="l_cpf">CPF:</label>
+			<input type="text" name="cpf" id="cpf">
+		</p>
+
+		<p>
+			<label for="l_nascimento">Data de Nascimento:</label>
+			<input type="date" name="nascimento" id="nascimento"> 
+		</p>
+
+        <p>
+			<label for="l_telefone">Telefone:</label>
+			<input type="text" name="telefone" id="telefone">
+		</p>
+
+        <p>
+			<label for="l_email">E-mail:</label>
+			<input type="email" name="email" id="email">
+		</p>
+
+		<p>
+			<button name="gravar" id="gravar" onclick="cadastrar()">Gravar</button>
+			<button name="voltar" id="voltar" onclick="window.location='lista_de_clientes.html'">Voltar</button>
+		</p>
+	</form>
+<!--ajustado-->
+</body>
+</html>
