@@ -25,10 +25,8 @@ function cadastrar(){
     var nome = document.getElementById("nome").value; 
     var preco = document.getElementById("preco_de_venda").value; 
     var categoria = document.getElementById("categoria").value; 
-
-    var ativo = document.getElementById("Ativo").value; 
-    var nome = document.getElementById("nome").value; //parei aqui
-
+    var ativo = document.getElementById("Ativo").value; //verificar como utiliza tipo radio
+    var xx = document.getElementById("xx").value; //verificar como utiliza tipo checkbox
 
     if (sessionStorage.getItem("vetor_contatos")) {
         contatos = JSON.parse(sessionStorage.getItem("vetor_contatos"));
@@ -39,7 +37,9 @@ function cadastrar(){
         Nome: nome,
         Telefone: telefone,
         Preço: preco_de_venda,
-        Categoria: categoria
+        Categoria: categoria,
+        Ativo: ativo,
+        xx: xx
     };
 
     contatos.push(pessoa);
@@ -75,6 +75,10 @@ function listar() {
                         break;
                     case "Categoria":
                         celula.innerHTML = contatos[i]["Categoria"];
+                    case "Ativo":
+                        celula.innerHTML = contatos[i]["Ativo"];
+                    case "xx":
+                        celula.innerHTML = contatos[i]["xx"];
 
 
                 } 
