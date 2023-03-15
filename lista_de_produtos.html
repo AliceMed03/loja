@@ -39,7 +39,7 @@
 
 	<h1>Lista de Produtos</h1>
 
-	<table width="70%">
+	<table border="1">
 		<thead>
 			<tr>
 				<th>Código</th>
@@ -57,19 +57,18 @@
 	</table>
 
 	<p>
-		<button type="reset" name="enviar_dados" id="enviar_dados" 
-		onclick="window.location='cadastro_de_produtos.html'">Cadastrar Produto</button>
-		<button type="reset" name="limpar" id="limpar"
-		onclick="window.location='login.html'">Logoff</button>
+		<input type="button" name="cadastrar" id="cadastrar" value="Cadastrar Produto" onclick="window.location='cadastro_de_produtos.html'" 
+		class="button">
+		<input type="button" name="sair" id="sair" value="Logoff" onclick="window.location='login.html'" class="button">
 	</p>
 
 	<script id="colunas" type="text/x-jsrender">
-        <td data-column="Código"></td>
+        <td data-column="Codigo"></td>
         <td data-column="Nome"></td>
-        <td data-column="Preço de Venda"></td>
+        <td data-column="Preco_de_Venda"></td>
         <td data-column="Categoria"></td>
         <td data-column="Ativo"></td>
-        <td data-column="Tamanhos Disponíveis"></td>
+        <td data-column="Tamanhos_Disponiveis"></td>
     </script>
 
 </body>

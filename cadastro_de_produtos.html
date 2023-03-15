@@ -40,7 +40,7 @@
 
 		<p>
 			<label for="l_preco">Preço de Venda:</label>
-			<input type="text" name="preco_de_venda" id="preco_de_venda" 
+			<input type="number" name="preco" id="preco" 
 			 placeholder="Digite o valor em R$">
 		</p>
 
@@ -84,8 +84,8 @@
 			 	<label for="l_G">G</label>
 		</p>
 		<p>
-			<button name="gravar" id="gravar" onclick="cadastrar()">Gravar</button>
-			<button name="voltar" id="voltar" onclick="window.location='lista_de_produtos.html'">Voltar</button>
+			<input type="button" name="gravar" id="gravar" value="Gravar" onclick="cadastrar()" class="button">
+			<input type="button" name="voltar" id="voltar" value="voltar" onclick="window.location='lista_de_produtos.html'" class="button">
 		</p>
 	</form>
 <!--ajustado-->

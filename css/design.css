@@ -22,7 +22,7 @@ p{
 	color: #C71585
 }
 
-button {
+.button {
 	background-color: #C71585;
 	color: black;
 	cursor: pointer; 

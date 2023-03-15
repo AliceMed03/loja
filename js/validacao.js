@@ -23,29 +23,25 @@ function cadastrar(){
     
     var codigo = document.getElementById("codigo").value;
     var nome = document.getElementById("nome").value; 
-    var preco = document.getElementById("preco_de_venda").value; 
+    var preco = document.getElementById("preco").value; 
     var categoria = document.getElementById("categoria").value; 
-    var ativo = document.getElementById("Ativo").value; //verificar como utiliza tipo radio
-    var xx = document.getElementById("xx").value; //verificar como utiliza tipo checkbox
 
-    if (sessionStorage.getItem("vetor_contatos")) {
-        contatos = JSON.parse(sessionStorage.getItem("vetor_contatos"));
+    if (sessionStorage.getItem("vetor_produtos")) {
+        produtos = JSON.parse(sessionStorage.getItem("vetor_produtos"));
     }
 
     var pessoa = {};
     pessoa = {
+        Codigo: codigo,
         Nome: nome,
-        Telefone: telefone,
-        Preço: preco_de_venda,
+        Preco: preco,
         Categoria: categoria,
-        Ativo: ativo,
-        xx: xx
     };
 
-    contatos.push(pessoa);
+    produtos.push(pessoa);
     // Para armazenar na session storage, localizado em application, apertando F12.
-    sessionStorage.setItem("vetor_contatos", JSON.stringify(contatos)); 
-    console.log(contatos);
+    sessionStorage.setItem("vetor_produtos", JSON.stringify(produtos));
+    console.log(produtos) 
     return true
 }
 
@@ -54,8 +50,8 @@ function listar() {
     var dados = document.getElementById("colunas");
     var registros = document.getElementsByTagName("tbody")[0];
 
-    var contatos = JSON.parse(sessionStorage.getItem("vetor_contatos"));
-    for (var i = 0 ; i < contatos.length ; i++){
+    var produtos = JSON.parse(sessionStorage.getItem("vetor_produtos"));
+    for (var i = 0 ; i < produtos.length ; i++){
 
         var novaLinha = document.createElement("tr"); //Cria uma nova linha (tr)
         console.log(novaLinha)
@@ -67,20 +63,17 @@ function listar() {
             var celula = novaLinha.childNodes[indice]; //<td>
             if (celula.nodeName == "TD"){ //verificar se a tag é <td>
                 switch(celula.dataset.column){ //verificar o nome da coluna para poder inserir o dado correto
-                    case "Nome":
-                        celula.innerHTML = contatos[i]["Nome"];
+                    case "Codigo":
+                        celula.innerHTML = produtos[i]["Codigo"];
                         break;
-                    case "Telefone":
-                        celula.innerHTML = contatos[i]["Telefone"];
+                    case "Nome":
+                        celula.innerHTML = produtos[i]["Nome"];
+                        break;
+                    case "Preco":
+                        celula.innerHTML = produtos[i]["Preco"];
                         break;
                     case "Categoria":
-                        celula.innerHTML = contatos[i]["Categoria"];
-                    case "Ativo":
-                        celula.innerHTML = contatos[i]["Ativo"];
-                    case "xx":
-                        celula.innerHTML = contatos[i]["xx"];
-
-
+                        celula.innerHTML = produtos[i]["Categoria"];
                 } 
             }     
         }
