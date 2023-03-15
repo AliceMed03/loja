@@ -9,7 +9,7 @@
 	<title>Cadastro</title>
 
 	<link rel="stylesheet" type="text/css" href="css/design.css">
-    <script src="js/validacao.js"></script>
+    <script src="js/validacao_clientes.js"></script>
 
 </head>
 <body>
@@ -29,8 +29,8 @@
 		</p>
 
 		<p>
-			<label for="l_cpf">CPF:</label>
-			<input type="text" name="cpf" id="cpf">
+			<label for="l_CPF">CPF:</label>
+			<input type="text" name="CPF" id="CPF">
 		</p>
 
 		<p>
@@ -49,8 +49,8 @@
 		</p>
 
 		<p>
-			<button type="submit" name="gravar" id="gravar" onclick="cadastrar()">Gravar</button>
-			<button type="submit" name="voltar" id="voltar" onclick="window.location='lista_de_clientes.html'">Voltar</button>
+			<input type="button" name="gravar" id="gravar" value="Gravar" onclick="cadastrar()" class="button">
+			<input type="button" name="voltar" id="voltar" value="voltar" onclick="window.location='lista_de_clientes.html'" class="button">
 		</p>
 	</form>
 <!--ajustado-->

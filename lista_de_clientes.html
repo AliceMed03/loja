@@ -15,6 +15,7 @@
 	<title>Lista de Clientes</title>
 	
 	<link rel="stylesheet" type="text/css" href="css/design.css">
+	<script src="js/validacao_clientes.js"></script>
 
 	<style type="text/css">
 		table{
@@ -57,10 +58,9 @@
 	</table>
 
 	<p>
-		<button type="reset" name="enviar_dados" id="enviar_dados" 
-		onclick="window.location='cadastro_de_clientes.html'">Cadastrar Cliente</button>
-		<button type="reset" name="limpar" id="limpar"
-		onclick="window.location='login.html'">Logoff</button>
+		<input type="button" name="cadastrar" id="cadastrar" value="Cadastrar Cliente" onclick="window.location='cadastro_de_clientes.html'" 
+		class="button">
+		<input type="button" name="sair" id="sair" value="Logoff" onclick="window.location='login.html'" class="button">
 	</p>
 
 	<script id="colunas" type="text/x-jsrender">
