@@ -80,10 +80,13 @@ function listar() {
                         break;
                     case "Nascimento":
                         celula.innerHTML = clientes[i]["Nascimento"];
+                        break;
                     case "Telefone":
                         celula.innerHTML = clientes[i]["Telefone"];
+                        break;
                     case "Email":
                         celula.innerHTML = clientes[i]["Email"];
+                        break;
                 } 
             }     
         }
