@@ -25,6 +25,7 @@ function cadastrar(){
     var nome = document.getElementById("nome").value; 
     var preco = document.getElementById("preco").value; 
     var categoria = document.getElementById("categoria").value; 
+    var ativo = document.querySelector('input[name=ativo]:checked').value; 
 
     if (sessionStorage.getItem("vetor_produtos")) {
         produtos = JSON.parse(sessionStorage.getItem("vetor_produtos"));
@@ -36,13 +37,24 @@ function cadastrar(){
         Nome: nome,
         Preco: preco,
         Categoria: categoria,
+        Ativo: ativo,
     };
+    
+    var tamanhos = [];
+    tamanhos = document.getElementsByName("tam");
+    var tam = {};
+    for (var i = 0; i < tamanhos.length; i++) {
+        if (tamanhos[i].checked) {
+            tam[i] = tamanhos[i].value;         
+        }
+    }
+    pessoa["Tamanho"] = tam;
 
     produtos.push(pessoa);
     // Para armazenar na session storage, localizado em application, apertando F12.
     sessionStorage.setItem("vetor_produtos", JSON.stringify(produtos));
     console.log(produtos) 
-    return true
+    return true   
 }
 
 function listar() {
@@ -74,6 +86,19 @@ function listar() {
                         break;
                     case "Categoria":
                         celula.innerHTML = produtos[i]["Categoria"];
+                        break; 
+                    case "Ativo":
+                         celula.innerHTML = produtos[i]["Ativo"];
+                        break; 
+
+                    case "Tamanhos_Disponiveis":                        
+                        for (var x in produtos[i]["Tamanho"]) {
+                        celula.innerHTML = celula.innerHTML + produtos[i]["Tamanho"][x];
+                        celula.innerHTML = celula.innerHTML + ' / ';
+                        console.log(x);
+                        console.log(produtos[i]["Tamanho"][x]);  
+                    }
+                    break;
                 } 
             }     
         }
